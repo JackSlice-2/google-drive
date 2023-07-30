@@ -1,8 +1,18 @@
+import Sidebar from "./Sidebar";
+import Header from "./components/Header";
+import FileTable from "./components/Table";
+import supabase from "./config/supabaseClient";
 
-function App() {
+const App = () => {
+  console.log(supabase)
+
   return (
     <div>
-      <h1>Drive</h1>
+      <Header />
+      <Sidebar />
+      <div>
+        <FileTable />
+      </div>
     </div>
   );
 }
